@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pune Traffic Information</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #0066cc;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #004d99;
+            padding: 0.5em 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 1em;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #003d66;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2em auto;
+            padding: 0 1em;
+        }
+
+        section {
+            background-color: white;
+            padding: 2em;
+            margin-bottom: 2em;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #004d99;
+            margin-top: 0;
+        }
+
+        .traffic-update {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2em;
+            justify-content: center;
+        }
+
+        .update {
+            background-color: #e6f2ff;
+            border-radius: 10px;
+            padding: 1em;
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .update h3 {
+            color: #005bb5;
+            margin-top: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background-color: #004d99;
+            color: white;
+            margin-top: 2em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pune Traffic Information</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#updates">Traffic Updates</a></li>
+            <li><a href="#tips">Traffic Tips</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="home">
+            <h2>Welcome to Pune Traffic Information</h2>
+            <p>Stay updated with the latest traffic conditions and tips for navigating Pune's roads.</p>
+        </section>
+
+        <section id="updates">
+            <h2>Traffic Updates</h2>
+            <div class="traffic-update">
+                <div class="update">
+                    <h3>Update 1: Major Roadworks</h3><br>
+					<img src="https://www.punerealestate.com/images/jangali-maharaj-road.jpg" alt="Traffic" height="100" width="300">
+                    <p>Major roadworks are underway on Jangli Maharaj Road. Expect delays between 9 AM and 5 PM.</p>
+					
+                </div>
+                <div class="update">
+                    <h3>Update 2: Traffic Jam Near Pune Station</h3>
+					<img src="https://images.hindustantimes.com/rf/image_size_630x354/HT/p2/2017/08/08/Pictures/customers-regulation-hindustan-leading-congestion-traffic-tuesday_e9a93604-7c45-11e7-b5e3-d817f67cfdf5.jpg" alt="Traffic" height="100" width="300">
+                    <p>Heavy traffic is reported near Pune Station due to an ongoing event. Plan alternate routes.</p>
+                </div>
+                <div class="update">
+                    <h3>Update 3: New Traffic Signals Installed</h3>
+					<img src="https://static.toiimg.com/thumb/msid-104663667,imgsize-85918,width-400,height-225,resizemode-72/104663667.jpg" alt="Traffic" height="100" width="300">
+                    <p>New traffic signals have been installed at the intersection of University Road and Law College Road.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="tips">
+            <h2>Traffic Tips</h2>
+            <ul>
+                <li>Plan your route in advance and check traffic conditions before leaving.</li>
+                <li>Use public transport during peak hours to avoid congestion.</li>
+                <li>Follow traffic rules and signals to ensure safety on the roads.</li>
+                <li>Keep updated with local traffic news and alerts.</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>For any inquiries or feedback regarding traffic conditions, please reach out to us:</p>
+            <address>
+                <p>Email: <a href="mailto:info@punetraffic.com">info@punetraffic.com</a></p>
+                <p>Phone: +91-987-654-3210</p>
+            </address>
+        </section>
+    </div>
+
+    <footer>
+        <p>2024 Pune Traffic Information. All rights reserved.</p>
+    </footer>
+</body>
+</html>
