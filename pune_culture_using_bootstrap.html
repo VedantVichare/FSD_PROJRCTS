@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Pune Culture</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+        }
+
+        header {
+            background-color: #00695c;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #004d40;
+            padding: 1em 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 1em;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #003d33;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2em auto;
+            padding: 0 1em;
+        }
+
+        .intro, .highlights, .festivals {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2em;
+            padding: 2em;
+        }
+
+        .intro img, .highlight img, .festival img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .highlights, .festivals {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2em;
+        }
+
+        .highlight, .festival {
+            background-color: #e0f2f1;
+            border-radius: 8px;
+            flex: 1;
+            min-width: 250px;
+            padding: 1em;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background-color: #004d40;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Exploring Pune's Culture</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#highlights">Cultural Highlights</a></li>
+            <li><a href="#festivals">Local Festivals</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="intro" class="intro">
+            <h2>Introduction to Pune Culture</h2>
+            <img src="https://www.shutterstock.com/shutterstock/photos/492224272/display_1500/stock-photo-pune-city-high-resolution-panoramic-watercolor-illustration-492224272.jpg" alt="Pune Culture Intro">
+            <p>Pune, often known as the cultural capital of Maharashtra, is renowned for its rich heritage, vibrant traditions, and artistic contributions. The city is a melting pot of cultures, with influences from ancient history to modern times.</p>
+        </section>
+
+        <section id="highlights" class="highlights">
+            <div class="highlight">
+                <h3>Historical Architecture</h3>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Pune_Palace.jpg/800px-Pune_Palace.jpg" alt="Historical Architecture">
+                <p>Pune is home to numerous historic monuments like the Shaniwarwada and Aga Khan Palace, showcasing its rich architectural heritage.</p>
+            </div>
+
+            <div class="highlight">
+                <h3>Traditional Cuisine</h3>
+                <img src="https://static.toiimg.com/photo/74254209.cms" alt="Traditional Cuisine">
+                <p>The city’s cuisine is a blend of traditional Maharashtrian flavors, with popular dishes like Puran Poli, Misal Pav, and Vada Pav.</p>
+            </div>
+
+            <div class="highlight">
+                <h3>Arts and Crafts</h3>
+                <img src="https://i.pinimg.com/originals/ab/1b/61/ab1b61a98c62e322ac49e0c972960352.jpg" alt="Arts and Crafts">
+                <p>Pune has a thriving arts scene, with numerous galleries, theaters, and cultural events that celebrate both classical and contemporary arts.</p>
+            </div>
+        </section>
+
+        <section id="festivals" class="festivals">
+            <div class="festival">
+                <h3>Ganesh Chaturthi</h3>
+                <img src="https://www.campustimespune.com/wp-content/uploads/2015/10/ganesh-chathurthi-Pune.jpg" alt="Ganesh Chaturthi">
+                <p>Ganesh Chaturthi is one of the most celebrated festivals in Pune, marked by grand processions and intricate decorations of Lord Ganesh idols.</p>
+            </div>
+
+            <div class="festival">
+                <h3>Gudi Padwa</h3>
+                <img src="https://www.tourmyindia.com/states/maharashtra/images/gudi-padwa-festival1.jpg" alt="Gudi Padwa">
+                <p>Gudi Padwa, the Marathi New Year, is celebrated with traditional rituals, vibrant decorations, and festive feasts.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="intro">
+            <h2>Contact Us</h2>
+            <p>For more information about Pune's culture, feel free to reach out to us:</p>
+            <address>
+                <p>Email: <a href="mailto:info@puneculture.com">info@puneculture.com</a></p>
+                <p>Phone: +91-987-654-3210</p>
+            </address>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Pune Culture. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
