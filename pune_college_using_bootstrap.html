@@ -17,12 +17,14 @@
             color: white;
             padding: 1rem;
             text-align: center;
+            border-bottom: 2px solid #2c3e50; /* Added border */
         }
 
         nav a {
             color: white;
             margin: 0 1rem;
             text-decoration: none;
+            padding: 0.5rem; /* Added padding */
         }
 
         h1,
@@ -40,6 +42,10 @@
 
         section {
             margin-bottom: 2rem;
+            padding: 1.5rem; /* Added padding */
+            border: 1px solid #ddd; /* Added border */
+            border-radius: 8px; /* Added border-radius */
+            background-color: white;
         }
 
         img {
@@ -47,6 +53,15 @@
             height: 200px;
             object-fit: cover;
             border-radius: 5px;
+        }
+
+        .img-container {
+            margin-top: 1rem;
+        }
+
+        .img-container img {
+            border: 2px solid #ddd; /* Added border */
+            border-radius: 8px; /* Added border-radius */
         }
     </style>
 </head>
@@ -88,36 +103,36 @@
     <div class="container">
         <section id="mit" class="mb-5">
             <h2>MIT (Maharashtra Institute of Technology)</h2>
-            <p>
+            <div class="img-container">
                 <a href="https://admissions.mitwpu.edu.in/?utm_source=Google&utm_medium=srv-gsn-awareness&utm_campaign=generic&gad_source=1&gclid=CjwKCAjw4_K0BhBsEiwAfVVZ_y3RvX2Ss8hED8fOO3Y712166LumerYmC-HWVGUGknzV-cW4iJ86cBoCpAsQAvD_BwE" target="_blank">
                     <img src="https://img.jagranjosh.com/images/2023/June/1562023/MIT-WPU-Open-Doors-to-a-World-Class-Education-and-Transformation.jpg"
                         class="img-fluid" alt="MIT Pune">
                 </a>
-            </p>
+            </div>
             <p>MIT Pune is one of the top engineering colleges in Pune, known for its excellent faculty, state-of-the-art
                 infrastructure, and a wide range of engineering courses.</p>
         </section>
 
         <section id="vit" class="mb-5">
             <h2>VIT (Vishwakarma Institute of Technology)</h2>
-            <p>
+            <div class="img-container">
                 <a href="https://www.vit.edu/" target="_blank">
                     <img src="https://www.vit.edu/media/k2/items/src/1d11e5ebeed3c42540f69555bbe34fb8.jpg"
                         class="img-fluid" alt="VIT Pune">
                 </a>
-            </p>
+            </div>
             <p>Vishwakarma Institute of Technology is a highly regarded engineering college offering undergraduate and
                 postgraduate programs in various engineering disciplines.</p>
         </section>
 
         <section id="coep" class="mb-5">
             <h2>COEP (College of Engineering Pune)</h2>
-            <p>
+            <div class="img-container">
                 <a href="https://www.coep.org.in/" target="_blank">
                     <img src="https://media.getmyuni.com/azure/college-image/big/college-of-engineering-coe-pune.jpg"
                         class="img-fluid" alt="COEP Pune">
                 </a>
-            </p>
+            </div>
             <p>College of Engineering Pune is one of the oldest engineering colleges in India, known for its rich
                 heritage, academic excellence, and robust research programs.</p>
         </section>
