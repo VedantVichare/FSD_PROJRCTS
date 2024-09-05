@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Calculator</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h1 class="text-center mb-4">Calculator</h1>
+
+                        <div class="mb-3">
+                            <label for="fno" class="form-label">First Number:</label>
+                            <input type="text" class="form-control" id="fno" name="fno" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="sno" class="form-label">Second Number:</label>
+                            <input type="text" class="form-control" id="sno" name="sno" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="result" class="form-label">Result:</label>
+                            <input type="text" class="form-control" id="result" name="result">
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-primary" onclick="calculate('add')">ADDITION</button>
+                            <button class="btn btn-secondary" onclick="calculate('subtract')">SUBTRACTION</button>
+                            <button class="btn btn-success" onclick="calculate('multiply')">MULTIPLICATION</button>
+                            <button class="btn btn-danger" onclick="calculate('divide')">DIVISION</button>
+                            <button class="btn btn-warning mt-2" onclick="clearFields()">CLEAR</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Bootstrap JS and its dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+        function clearFields() {
+            document.getElementById('fno').value = '';
+            document.getElementById('sno').value = '';
+            document.getElementById('result').value = '';
+        }
+
+        function calculate(operation) {
+
+            var num1 = parseFloat(document.getElementById('fno').value);
+            var num2 = parseFloat(document.getElementById('sno').value);
+            var result;
+
+
+            if (isNaN(num1) || isNaN(num2)) {
+                result = 'Error: Invalid input';
+            } else {
+
+                switch (operation) {
+                    case 'add':
+                        result = num1 + num2;
+                        break;
+                    case 'subtract':
+                        result = num1 - num2;
+                        break;
+                    case 'multiply':
+                        result = num1 * num2;
+                        break;
+                    case 'divide':
+                        if (num2 !== 0) {
+                            result = num1 / num2;
+                        } else {
+                            result = 'Error: Division by zero';
+                        }
+                        break;
+                    case 'clear':
+                        document.getElementById('fno').value = '';
+                        document.getElementById('sno').value = '';
+                        document.getElementById('result').value = '0';
+                        break;
+
+
+                    default:
+                        result = 'Invalid operation';
+                }
+            }
+
+
+            document.getElementById('result').value = result;
+        }
+    </script>
+</body>
+
+</html>
