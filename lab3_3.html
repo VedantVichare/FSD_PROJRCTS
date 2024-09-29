@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM Manipulation</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        button {
+            margin: 5px;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #fff;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="header">Welcome to JavaScript DOM Manipulation!</h1>
+    <div class="form-container">
+        <button id="changeTextButton">Change Text</button>
+        <button id="changeImageButton">Change Image</button>
+        <button id="addTextNodeButton">Add Text Node</button>
+        <button id="deleteNodeButton">Delete Last Node</button>
+    </div>
+
+    <img id="imageElement" src="feature1.jpeg" alt="Initial Image">
+    <ul id="list">
+        <li>Initial List Item</li>
+    </ul>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Immediately remove paragraphs with class 'example-class'
+            let paragraphs = document.getElementsByClassName('example-class');
+            while (paragraphs.length > 0) {
+                paragraphs[0].parentNode.removeChild(paragraphs[0]); // Remove paragraphs
+            }
+
+            let isTextChanged = false; // To track text change state
+
+            // Toggle text on button click
+            document.getElementById('changeTextButton').addEventListener('click', function () {
+                const header = document.getElementById('header');
+                if (isTextChanged) {
+                    header.innerHTML = "Welcome to Courses on Udemy";
+                    header.style.color = 'black'; // Reset text color
+                } else {
+                    header.innerHTML = "Udemy have Best Courses";
+                    header.style.color = 'red'; // Change text color
+                }
+                isTextChanged = !isTextChanged; // Toggle the state
+            });
+
+            // Change image source when the button is clicked
+            let imageUrls = ["feature1.jpeg", "feature2.jpeg", "feature3.jpeg"];
+            let currentImageIndex = 0;
+
+            document.getElementById('changeImageButton').addEventListener('click', function () {
+                currentImageIndex = (currentImageIndex + 1) % imageUrls.length;
+                document.getElementById('imageElement').src = imageUrls[currentImageIndex];
+            });
+
+            // Add a text node to the list
+            document.getElementById('addTextNodeButton').addEventListener('click', function () {
+                let newListItem = document.createElement('li');
+                let newText = document.createTextNode('New List Item');
+                newListItem.appendChild(newText);
+                document.getElementById('list').appendChild(newListItem);
+            });
+
+            // Delete the last node from the list
+            document.getElementById('deleteNodeButton').addEventListener('click', function () {
+                let list = document.getElementById('list');
+                if (list.lastChild) {
+                    list.removeChild(list.lastChild); // Deletes the last node
+                }
+            });
+
+            // jQuery section for additional functionality
+            $(document).ready(function () {
+                // Change button text using jQuery
+                $("#changeTextButton").click(function () {
+                    $(this).text("Text Changed!");
+                });
+
+                // Add alt attribute to the image using jQuery
+                $("#imageElement").attr("alt", "Updated Course Image");
+            });
+        });
+    </script>
+</body>
+
+</html>
